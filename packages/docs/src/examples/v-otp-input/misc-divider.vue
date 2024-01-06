@@ -8,9 +8,12 @@
   >
     <h3 class="text-h5">Verification Code</h3>
 
-    <div class="text-subtitle-2 font-weight-light mb-3">Please enter the verification code sent to your mobile</div>
+    <div class="text-subtitle-2 font-weight-light mb-3">
+      Please enter the verification code sent to your mobile
+    </div>
 
     <v-otp-input
+      v-model="otp"
       class="mb-8"
       divider="•"
       length="4"
@@ -30,15 +33,15 @@
 </template>
 
 <script setup>
-  import { shallowRef } from 'vue'
+import { shallowRef } from "vue";
 
-  const otp = shallowRef('')
+const otp = shallowRef("");
 </script>
 
 <script>
-  export default {
-    data: () => ({
-      otp: '',
-    }),
-  }
+export default {
+  data: () => ({
+    otp: "",
+  }),
+};
 </script>
